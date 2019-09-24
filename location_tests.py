@@ -9,5 +9,10 @@ class TestLab1(unittest.TestCase):
     
     # Add more tests!
 
+    def test_repr1(self):
+        loc = Location("Sac", -123.2, 34.2)
+        self.assertEqual(repr(loc),"Location('Sac', -123.2, 34.2)")
+
+
 if __name__ == "__main__":
         unittest.main()
