@@ -39,11 +39,16 @@ class TestLab1(unittest.TestCase):
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
             bin_search(1, 2, 3, tlist)
-    def test_bin_search3(self):
-        list_val = [1,2,3,4]
-        low = 1
-        high = 3
-        self.assertEqual(bin_search(1, low, high, list_val), None)
+    def test_bin_search4(self):
+        list_val =[10,20,30,40,50]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(30, 0, len(list_val)-1, list_val), 2)
+    def test_bin_search5(self):
+        list_val = []
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(1, 0, len(list_val)-1, list_val), None)
 
 
 if __name__ == "__main__":
