@@ -14,6 +14,9 @@ class TestLab1(unittest.TestCase):
         list = [1, 2, 3, 4]
         self.assertEqual(max_list_iter(list), 4)
     def test_max_list_iter3(self):
+        list = [12, 32, 1, 2]
+        self.assertEqual(max_list_iter(list), 32)
+    def test_max_list_iter4(self):
         # checking if an empty list results in None
         list = []
         self.assertEqual(max_list_iter(list), None)
@@ -49,7 +52,11 @@ class TestLab1(unittest.TestCase):
         low = 0
         high = len(list_val)-1
         self.assertEqual(bin_search(1, 0, len(list_val)-1, list_val), None)
-
+    def test_bin_search6(self):
+        list_val =[10,20,30,40,50]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(50, 0, len(list_val)-1, list_val), 4)
 
 if __name__ == "__main__":
         unittest.main()
